@@ -1,0 +1,273 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+
+:root {
+  --clr-dark: rgb(63, 63, 63);
+  --clr-bright: rgb(255, 255, 255);
+  --clr-default: rgb(224, 224, 224);
+  --clr-default-light: rgba(224, 224, 224, 0.3);
+  --clr-default-hov: rgb(174, 174, 174);
+  --clr-default-disabled: rgb(158, 158, 158);
+  --clr-primary: rgb(41, 98, 255);
+  --clr-primary-light: rgba(41, 98, 255, 0.1);
+  --clr-primary-hov: rgb(0, 57, 203);
+  --clr-primary-disabled: rgb(161, 186, 255);
+  --clr-secondary: rgb(69, 90, 100);
+  --clr-secondary-light: rgba(69, 90, 100, 0.1);
+  --clr-secondary-hov: rgb(28, 49, 58);
+  --clr-secondary-disabled: rgb(161, 179, 187);
+  --clr-danger: rgb(211, 47, 47);
+  --clr-danger-light: rgba(211, 47, 47, 0.1);
+  --clr-danger-hov: rgb(154, 0, 7);
+  --clr-danger-disabled: rgb(211, 153, 153);
+  --shadow-default: 0px 2px 3px rgba(51, 51, 51, 0.2);
+  --shadow-primary: 0px 2px 3px rgba(41, 98, 255, 0.2);
+  --shadow-secondary: 0px 2px 3px rgba(69, 90, 100, 0.2);
+  --shadow-danger: 0px 2px 3px rgba(211, 47, 47, 0.2);
+  --shadow-none: none;
+}
+
+.btn {
+  color: var(--clr-dark);
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  box-sizing: border-box;
+  padding: 8px 16px;
+  border: 1px solid var(--clr-default);
+  border-radius: 6px;
+  background: var(--clr-default);
+  box-shadow: var(--shadow-default);
+  cursor: pointer;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 250ms ease;
+}
+
+.btn:hover {
+  background-color: var(--clr-default-hov);
+}
+
+.btn + .btn {
+  margin-left: 1em;
+}
+
+.btn-sm {
+  padding: 6px 12px;
+}
+
+.btn-lg {
+  padding: 11px 22px;
+}
+
+.btn[disabled] {
+  color: var(--clr-default-disabled);
+  box-shadow: var(--shadow-none);
+  cursor: not-allowed;
+}
+
+.btn[disabled]:hover {
+  background-color: var(--clr-default);
+}
+
+.btn-primary,
+.btn-secondary,
+.btn-danger {
+  color: var(--clr-bright);
+}
+
+.btn-primary {
+  background-color: var(--clr-primary);
+  border-color: var(--clr-primary);
+  box-shadow: var(--shadow-primary);
+}
+
+.btn-primary:hover {
+  background-color: var(--clr-primary-hov);
+  border-color: var(--clr-primary);
+}
+
+.btn-primary[disabled] {
+  color: var(--clr-primary-disabled);
+}
+
+.btn-primary[disabled]:hover {
+  background-color: var(--clr-primary);
+}
+
+.btn-secondary {
+  background-color: var(--clr-secondary);
+  box-shadow: var(--shadow-secondary);
+  border-color: var(--clr-secondary);
+}
+
+.btn-secondary:hover {
+  background-color: var(--clr-secondary-hov);
+  border-color: var(--clr-secondary);
+}
+
+.btn-secondary[disabled] {
+  color: var(--clr-secondary-disabled);
+}
+
+.btn-secondary[disabled]:hover {
+  background-color: var(--clr-secondary);
+}
+
+.btn-danger {
+  background-color: var(--clr-danger);
+  box-shadow: var(--shadow-danger);
+  border-color: var(--clr-default);
+}
+
+.btn-danger:hover {
+  background-color: var(--clr-danger-hov);
+  border-color: var(--clr-default);
+}
+
+.btn-danger[disabled] {
+  color: var(--clr-danger-disabled);
+}
+
+.btn-danger[disabled]:hover {
+  background-color: var(--clr-danger);
+}
+
+.btn-shadowless,
+.btn-shadowless:hover {
+  box-shadow: var(--shadow-none);
+}
+
+.btn-outline {
+  box-shadow: var(--shadow-none);
+  background-color: transparent;
+  border: 1px solid var(--clr-default);
+}
+
+.btn-outline:hover {
+  background-color: var(--clr-default-light);
+}
+
+.btn-outline[disabled],
+.btn-outline[disabled]:hover {
+  color: var(--clr-default-disabled);
+}
+
+.btn-outline.btn-primary {
+  color: var(--clr-primary);
+  border-color: var(--clr-primary);
+}
+
+.btn-outline.btn-primary:hover {
+  background-color: var(--clr-primary-light);
+}
+
+.btn-outline.btn-primary[disabled],
+.btn-outline.btn-primary[disabled]:hover {
+  color: var(--clr-primary-disabled);
+  border-color: var(--clr-primary-disabled);
+}
+
+.btn-outline.btn-secondary {
+  color: var(--clr-secondary);
+  border-color: var(--clr-secondary);
+}
+
+.btn-outline.btn-secondary:hover {
+  background-color: var(--clr-secondary-light);
+}
+
+.btn-outline.btn-secondary[disabled],
+.btn-outline.btn-secondary[disabled]:hover {
+  color: var(--clr-secondary-disabled);
+  border-color: var(--clr-secondary-disabled);
+}
+
+.btn-outline.btn-danger {
+  color: var(--clr-danger);
+  border-color: var(--clr-danger);
+}
+
+.btn-outline.btn-danger:hover {
+  background-color: var(--clr-danger-light);
+}
+
+.btn-outline.btn-danger[disabled],
+.btn-outline.btn-danger[disabled]:hover {
+  color: var(--clr-danger-disabled);
+  border-color: var(--clr-danger-disabled);
+}
+
+.btn-outline[disabled]:hover {
+  background-color: transparent;
+}
+
+.btn-text {
+  border-color: transparent;
+  background-color: transparent;
+  box-shadow: var(--shadow-none);
+}
+
+.btn-text:hover {
+  background-color: var(--clr-default-light);
+  border-color: transparent;
+}
+
+.btn-text.btn-primary {
+  color: var(--clr-primary);
+}
+
+.btn-text.btn-primary:hover {
+  background-color: var(--clr-primary-light);
+}
+
+.btn-text.btn-secondary {
+  color: var(--clr-secondary);
+}
+
+.btn-text.btn-secondary:hover {
+  background-color: var(--clr-secondary-light);
+}
+
+.btn-text.btn-danger {
+  color: var(--clr-danger);
+}
+
+.btn-text.btn-danger:hover {
+  background-color: var(--clr-danger-light);
+}
+
+.btn-text[disabled],
+.btn-text[disabled]:hover {
+  color: var(--clr-default-disabled);
+  border-color: transparent;
+  background-color: transparent;
+}
+
+.btn-text.btn-primary[disabled],
+.btn-text.btn-primary[disabled]:hover {
+  color: var(--clr-primary-disabled);
+}
+
+.btn-text.btn-secondary[disabled],
+.btn-text.btn-secondary[disabled]:hover {
+  color: var(--clr-secondary-disabled);
+}
+
+.btn-text.btn-danger[disabled],
+.btn-text.btn-danger[disabled]:hover {
+  color: var(--clr-danger-disabled);
+}
+
+.material-icons {
+  font-size: 14px;
+}
+
+.start-icon {
+  margin-right: 0.5em;
+}
+
+.end-icon {
+  margin-left: 0.5em;
+}

@@ -98,6 +98,12 @@ function App() {
           startIcon="local_grocery_store"
         />
       </div>
+      <div>
+        Build by{" "}
+        <a href="https://github.com/Timothy1982/react-button-component">
+          Timothy Morrell
+        </a>
+      </div>
     </div>
   );
 }

@@ -5,7 +5,7 @@ const SIZES = ["sm", "md", "lg"];
 const VARIANTS = ["default", "outline", "text"];
 const COLORS = ["default", "primary", "secondary", "danger"];
 
-function Button({
+export default function Button({
   label,
   variant,
   disableShadow,
@@ -41,5 +41,3 @@ function Button({
     </button>
   );
 }
-
-export default Button;
